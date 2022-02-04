@@ -1,4 +1,4 @@
-package spring.boot.scala.example.controller
+package com.github.rameshmokkapati.springbootscalatemplate.controller
 
 import org.junit.jupiter.api.Assertions.{assertEquals, assertTrue}
 import org.junit.jupiter.api.Test
@@ -10,7 +10,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.*
 import org.springframework.test.context.ActiveProfiles
-import spring.boot.scala.example.controller.RootController
+import com.github.rameshmokkapati.springbootscalatemplate.controller.RootController
 
 import java.util.{Collections, UUID}
 

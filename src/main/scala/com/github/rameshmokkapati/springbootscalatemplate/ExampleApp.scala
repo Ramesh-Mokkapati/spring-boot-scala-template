@@ -1,4 +1,4 @@
-package spring.boot.scala.example
+package com.github.rameshmokkapati.springbootscalatemplate
 
 import org.eclipse.jetty.server.{NetworkTrafficServerConnector, Server}
 import org.springframework.beans.factory.annotation.Value

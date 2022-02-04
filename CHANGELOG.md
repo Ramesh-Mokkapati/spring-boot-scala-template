@@ -1,4 +1,4 @@
-# %NAME% Changelog
+# spring-boot-scala-template Changelog
 
 ## [Unreleased]
 

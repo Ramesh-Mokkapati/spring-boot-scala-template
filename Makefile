@@ -1,4 +1,4 @@
-IMAGE_NAME:=jecklgamis/spring-boot-scala-example
+IMAGE_NAME:=ramesh-mokkapati/spring-boot-scala-template
 IMAGE_TAG:=$(shell git rev-parse HEAD)
 
 default:
@@ -21,7 +21,7 @@ push:
 	 docker push $(IMAGE_NAME):$(IMAGE_TAG)
 	 docker push $(IMAGE_NAME):latest
 tag:
-	 git tag -m "spring-boot-scala-example-v$(IMAGE_TAG)" -a "v$(IMAGE_TAG)"
+	 git tag -m "spring-boot-scala-template-v$(IMAGE_TAG)" -a "v$(IMAGE_TAG)"
 	 git push --tags
 deploy: dist image push
 	cd deployment/k8s && ./create-k8s-files.py --version $(IMAGE_TAG)
