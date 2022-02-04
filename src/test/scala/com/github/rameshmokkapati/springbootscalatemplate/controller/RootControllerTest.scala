@@ -9,13 +9,14 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.web.server.LocalServerPort
 import com.github.rameshmokkapati.springbootscalatemplate.controller.RootController
 
-class RootControllerTest extends BaseAppTest :
+class RootControllerTest extends BaseAppTest {
   @Autowired
   val rootController: RootController = null
 
   @Test
-  def testRootEndpoint(): Unit =
+  def testRootEndpoint(): Unit = {
     val entity = restTemplate.getForObject(s"http://localhost:$port/", classOf[Map[String, Any]])
     assertTrue(entity.contains("name"))
     assertTrue(entity.contains("message"))
-
+  }
+}

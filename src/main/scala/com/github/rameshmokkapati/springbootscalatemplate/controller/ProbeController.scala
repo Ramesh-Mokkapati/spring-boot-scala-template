@@ -1,16 +1,13 @@
 package com.github.rameshmokkapati.springbootscalatemplate.controller
 
 import io.micrometer.core.annotation.Timed
-import org.springframework.beans.factory.annotation.{Autowired, Value}
 import org.springframework.http.{MediaType, ResponseEntity}
-import org.springframework.web.bind.annotation.*
-import org.springframework.web.bind.annotation.RequestMethod.{GET, PUT}
-
-import java.time.LocalDateTime
+import org.springframework.web.bind.annotation.RequestMethod.GET
+import org.springframework.web.bind.annotation.{RequestMapping, RestController}
 
 @RestController
 @RequestMapping(path = Array("/probe"), produces = Array(MediaType.APPLICATION_JSON_VALUE))
-class ProbeController:
+class ProbeController {
 
   @Timed
   @RequestMapping(path = Array("/live"), method = Array(GET))
@@ -21,6 +18,4 @@ class ProbeController:
   @RequestMapping(path = Array("/ready"), method = Array(GET))
   def ready(): ResponseEntity[Map[String, Any]] =
     ResponseEntity.ok().body(Map("message" -> "I'm ready!"))
-
-
-
+}
